@@ -118,4 +118,45 @@ console.log(typeof language);
 // console.log('9 + 5')
 
 // 5 falsy values: 0, '', undefined, null, NaN
-console.log(`i'm`);
+// console.log(`i'm`);
+
+// const age = 19;
+// if (age === 18) {
+//     console.log(`true`);
+// }
+
+// const numNeighbours = Number(prompt(`How many neighbour countries does your country 
+// have?`));
+
+// if (numNeighbours === 1) {
+//     console.log(`Only 1 border!`);
+// } else if (numNeighbours > 1) {
+//     console.log(`'More than 1 border`);
+// } else {
+//     console.log(`No borders!`);
+// }
+
+// const isLanguageEnglish = true;
+// const population = 500;
+// const isNotIsland = true;
+
+// if (isLanguageEnglish && population < 50 && isNotIsland) {
+//     console.log(`This land is great for Sarah`);
+// } else {
+//     console.log(`This land is not for Sarah`);
+// }
+
+const averageScoreDolphins = (96 + 108 + 96) / 3;
+console.log(averageScoreDolphins);
+const averageScoreKoalas = (96 + 108 + 97) / 3;
+console.log(averageScoreKoalas);
+
+if (averageScoreDolphins > averageScoreKoalas && averageScoreDolphins >= 100) {
+    console.log(`Dolphins win with ${averageScoreDolphins}`);
+} else if (averageScoreDolphins < averageScoreKoalas && averageScoreKoalas >= 100) {
+    console.log(`Koalas win with ${averageScoreKoalas}`);
+} else if (averageScoreDolphins === averageScoreKoalas && averageScoreDolphins >= 100) {
+    console.log(`Draw with ${averageScoreDolphins}`);
+} else {
+    console.log(`You're all loosers`);
+}
