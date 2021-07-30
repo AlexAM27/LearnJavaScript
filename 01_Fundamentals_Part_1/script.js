@@ -146,17 +146,64 @@ console.log(typeof language);
 //     console.log(`This land is not for Sarah`);
 // }
 
-const averageScoreDolphins = (96 + 108 + 96) / 3;
-console.log(averageScoreDolphins);
-const averageScoreKoalas = (96 + 108 + 97) / 3;
-console.log(averageScoreKoalas);
+// const averageScoreDolphins = (96 + 108 + 96) / 3;
+// console.log(averageScoreDolphins);
+// const averageScoreKoalas = (96 + 108 + 97) / 3;
+// console.log(averageScoreKoalas);
 
-if (averageScoreDolphins > averageScoreKoalas && averageScoreDolphins >= 100) {
-    console.log(`Dolphins win with ${averageScoreDolphins}`);
-} else if (averageScoreDolphins < averageScoreKoalas && averageScoreKoalas >= 100) {
-    console.log(`Koalas win with ${averageScoreKoalas}`);
-} else if (averageScoreDolphins === averageScoreKoalas && averageScoreDolphins >= 100) {
-    console.log(`Draw with ${averageScoreDolphins}`);
-} else {
-    console.log(`You're all loosers`);
-}
+// if (averageScoreDolphins > averageScoreKoalas && averageScoreDolphins >= 100) {
+//     console.log(`Dolphins win with ${averageScoreDolphins}`);
+// } else if (averageScoreDolphins < averageScoreKoalas && averageScoreKoalas >= 100) {
+//     console.log(`Koalas win with ${averageScoreKoalas}`);
+// } else if (averageScoreDolphins === averageScoreKoalas && averageScoreDolphins >= 100) {
+//     console.log(`Draw with ${averageScoreDolphins}`);
+// } else {
+//     console.log(`You're all loosers`);
+// }
+
+// const day = `thurday`;
+
+// switch (day) {
+//     case `monday`:
+//         console.log(`monday`);
+//         break;
+//     case `thursday`:
+//         console.log(`th`);
+//         break;
+//     default:
+//         console.log(`bo`);
+// }
+
+// const language = `enlish`;
+
+// switch (language) {
+//     case `chinese`:
+//         console.log(`MOST number of native speakers!`);
+//         break;
+//     case `spanish`:
+//         console.log(`2nd place in number of native speakers`);
+//         break;
+//     case `english`:
+//         console.log(`3rd place`);
+//         break;
+//     case `hindi`:
+//         console.log(`Number 4`);
+//         break;
+//     case `arabic`:
+//         console.log(`5th most spoken language`);
+//         break;
+//     default:
+//         console.log(`Great language too :D`);
+// }
+
+// const population = 34;
+
+// const average = population > 33 ? `above` : `below`;
+
+// console.log(`Portugal's population is ${population > 33 ? `above` : `below`} average`);
+
+const bill = 430;
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+console.log(`“The bill was ${bill}, the tip was ${tip}, and the total value 
+${bill + tip}`)
