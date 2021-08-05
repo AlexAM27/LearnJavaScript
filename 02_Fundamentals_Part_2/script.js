@@ -176,10 +176,100 @@
 // console.log(tips);
 // console.log(total);
 
-const obj = {
-    firstName: 'Jonas',
-    lastName: 'Schmitmann',
-    age: 2021 - 1987,
-    job: 'teacher',
-    friends: ['Micha', 'Aka47', 'Steve']
-};
+// const obj = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmitmann',
+//     age: 2021 - 1987,
+//     job: 'teacher',
+//     friends: ['Micha', 'Aka47', 'Steve']
+// };
+
+// console.log(obj.lastName);
+// console.log(obj['firstName']);
+
+// const nameKey = 'Name';
+// console.log(obj['first' + nameKey]);
+
+// // const askMe = prompt('What do you want to know about me?');
+
+// // if (obj[askMe]) {
+// //     console.log(obj[askMe]);
+// // } else {
+// //     console.log(`I don't do that`);
+// // }
+
+// obj.location = 'Germany';
+// obj['twitter'] = '@jonasx';
+// console.log(obj);
+
+// console.log(`${obj['firstName']} has ${obj.friends.length} and his best friend is ${obj.friends[0]}`)
+
+// const myCountry = {
+//     country: 'Germany',
+//     capital: 'Berlin',
+//     language: 'german',
+//     population: 83,
+//     neighbours: new Array('Austria', 'France', 'Poland', 'Czechien', 'Switzland')
+// };
+
+// console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neghbouring countries and a capital called ${myCountry.capital}`);
+
+// myCountry.population = myCountry.population + 2;
+// console.log(myCountry.population);
+
+// myCountry['population'] = myCountry.population - 2;
+// console.log(myCountry.population);
+
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmitmann',
+//     age: 1991,
+//     job: 'teacher',
+//     friends: ['Micha', 'Aka47', 'Steve'],
+//     hasdriverslicense: true,
+
+//     summary: function () {
+//         this.jonasSummary = `${this.firstName} has ${this.friends.length} and his best friend is ${this.friends[0]}`;
+//         return this.jonasSummary;
+//     }
+// };
+// console.log(jonas.summary());
+
+// console.log(jonas.jonasSummary);
+
+// const mark = {
+//     firstName: 'Mark',
+//     lastName: 'Miller',
+//     mass: 78,
+//     height: 1.69,
+
+//     calcBMI: function () {
+//         return Number(this.mass / this.height ** 2).toFixed(1);
+//     }
+// };
+
+// const john = {
+//     firstName: 'John',
+//     lastName: 'Smith',
+//     mass: 92,
+//     height: 1.95,
+
+//     calcBMI: function () {
+//         return Number(this.mass / this.height ** 2).toFixed(1);
+//     }
+// };
+
+// const marksBmi = mark.calcBMI();
+// const johnsBmi = john.calcBMI();
+
+// const checkBmi = function (marksBmi, johnsBmi) {
+//     if (marksBmi > johnsBmi) {
+//         return `${mark.firstName}'s BMI (${mark.calcBMI()}) is higher than ${john.firstName}'s (${john.calcBMI()})!`;
+//     } else if (marksBmi < johnsBmi) {
+//         return `${john.firstName}'s BMI (${john.calcBMI()}) is higher than ${mark.firstName}'s (${mark.calcBMI()})!`;
+//     } else {
+//         return `${john.firstName}'s BMI (${john.calcBMI()}) equals ${mark.firstName}'s (${mark.calcBMI()})!`;
+//     }
+// };
+
+// console.log(checkBmi(marksBmi, johnsBmi));
