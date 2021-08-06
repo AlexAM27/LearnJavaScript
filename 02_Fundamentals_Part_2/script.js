@@ -273,3 +273,29 @@
 // };
 
 // console.log(checkBmi(marksBmi, johnsBmi));
+
+// const myCountry = {
+//     country: 'Germany',
+//     capital: 'Berlin',
+//     language: 'German',
+//     population: 83,
+//     neighbours: ['Austria', 'Switzland', 'France', 'Poland'],
+
+//     describe: function () {
+//         return `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries
+//         and a capital called ${this.capital}.`;
+//     },
+
+//     checkIsIsland: function () {
+//         this.neighbours.length === 0 ? this.isIsland = true : this.isIsland = false;
+//     }
+// };
+
+// console.log(myCountry.describe());
+// myCountry.checkIsIsland();
+// console.log(myCountry);
+
+
+for (let i = 1; i <= 50; i++) {
+    console.log(`Voter number ${i} is currently voting`);
+};
