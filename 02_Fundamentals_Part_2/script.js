@@ -296,6 +296,14 @@
 // console.log(myCountry);
 
 
-for (let i = 1; i <= 50; i++) {
-    console.log(`Voter number ${i} is currently voting`);
-};
+// for (let i = 1; i <= 50; i++) {
+//     console.log(`Voter number ${i} is currently voting`);
+// };
+
+// const listOfNeighbours = new Array(['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']);
+// for (let i = 0; i < listOfNeighbours.length; i++) {
+//     for (let y = 0; y < listOfNeighbours[i].length; y++) {
+//         console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
+//     }
+// };
+
