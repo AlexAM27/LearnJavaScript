@@ -307,3 +307,33 @@
 //     }
 // };
 
+function solution(str) {
+    const arrayStr = new Array();
+    if (str.length % 2 === 0) {
+        for (let x = 0; x < str.length; x++) {
+            arrayStr.push(str[x] + str[x + 1]);
+            x++;
+        };
+    } else {
+        for (let x = 0; x < str.length; x++) {
+            if (x < str.length - 1) {
+                arrayStr.push(str[x] + str[x + 1]);
+            } else {
+                arrayStr.push(str[x] + '_');
+            };
+            x++;
+        };
+    };
+    return arrayStr;
+};
+
+function solution2(str) {
+    const arrayStr = [];
+    for (let i = 0; i < str.length; i += 2) {
+        let second = str[i + 1] || '_';
+        arrayStr.push(str[i] + second);
+    }
+    return arrayStr;
+}
+
+console.log(solution2('abc'));
