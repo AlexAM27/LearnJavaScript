@@ -307,161 +307,33 @@
 //     }
 // };
 
-// const population = new Array(89, 74, 93, 100);
-// const percentages2 = new Array();
-
-// function percentageOfWorld2(people) {
-//     return people / 7900 * 100;
-// }
-
-// let i = 0;
-
-// while(i < population.length) {
-//     percentages2.push(percentageOfWorld2(population[i]));
-//     i++;
-// }
-
-// console.log(percentages2);
-
-// const calcTip = function (bill) {
-//     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-// }
-
-// const bills = new Array(22, 295, 176, 440, 37, 105, 10, 1100, 86, 52);
-// const tips = new Array();
-// const totals = new Array();
-
-// for (let i = 0; i < bills.length; i++) {
-//     tips.push(calcTip(bills[i]));
-// }
-
-// let billNumber = 0;
-// while (billNumber < bills.length) {
-//     totals.push(bills[billNumber] + tips[billNumber]);
-//     billNumber++;
-// }
-
-// console.log(bills);
-// console.log(tips);
-// console.log(totals);
-
-// const calcAverage = function (arr) {
-//     let sum = 0;
-//     for (let i = 0; i < arr.length; i++) {
-//         sum += arr[i];
-//     }
-//     return sum / arr.length;
-// }
-
-// console.log(calcAverage(totals));
-
-// function toCamelCase(str){
-//     let newString = '';
-//     for (let i = 0; i < str.length; i++ ) {
-//         if (str[i] === '-' || str[i] === '_') {
-//             newString += str[i + 1].toUpperCase();
-//             i++;
-//         } else {
-//             newString += str[i];
-//         }
-//     }
-//     return newString;
-//   }
-
-//   let stringExample = 'The_Stealth_Warrior';
-
-//   console.log(toCamelCase(stringExample));
-
-// function findOutlier(integers){
-//     let evenNumberCounter = 0;
-//     let evenNumber;
-//     let oddNumber;
-//     for (let i = 0; i < integers.length; i++) {
-//         if (isEven(integers[i])) {
-//             evenNumber = integers[i];
-//             evenNumberCounter++;
-//         } else {
-//             oddNumber = integers[i];
-//         }
-//     }
-//     return evenNumberCounter > 1 ? oddNumber : evenNumber;
-//   }
-
-// function isEven(number) {
-//     return number % 2 === 0;
-// }
-
-// const integersArray = [160, 3, 1719, 19, 11, 13, -21];
-
-// console.log(findOutlier(integersArray));
-
-// function printerError(s) {
-//    const errorCharsArray = ['n', 'o', 'p', 'q','r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-//    let errorCounter = 0;
-//    for (let i = 0; i < s.length; i++) {
-//         if (errorCharsArray.includes(s[i])) {
-//             errorCounter++;
-//         }
-//    }
-//    return `${errorCounter}/${s.length}`;
-// }
-
-// const str = "aaabbbbhaijjjm";
-// console.log(printerError(str));
-
-// let stra = ["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"];
-
-// function longestConsec(strarr, k) {
-//     if (checkConcatConditions(strarr, k)) {
-//         return "";
-//      } else {
-//         let longestStringArray = [];
-//         for (let i = 0; i <= strarr.length - k; i++) {
-//             let str = "";
-//             for(let y = 0; y < k; y++) {
-//                 str += strarr[i + y]; 
-//             }
-//             longestStringArray[i] = str;
-//         }
-//         return findLongestStr(longestStringArray);
-//     }
-// }
-
-// function findLongestStr(arr) {
-//     let longestStr = "";
-//     for (let i = 0; i < arr.length; i++) {
-//         if (arr[i].length > longestStr.length) {
-//             longestStr = arr[i];
-//         }
-//     }
-//     return longestStr;
-// }
-
-// function checkConcatConditions(strarr, k) {
-//     return strarr.length === 0 || k > strarr.length || k <= 0;
-// }
-
-function findUniq(arr) {
-    let uniq;
-    let uniqCounter = 0;
-    for (let i = 0; i < arr.length; i++) {
-        uniq = arr[i];
-        for (let y = 0; y < arr.length; y++) {
-            if (uniq === arr[y]) {
-                uniqCounter++;
-            }
-            if (uniqCounter > 1) {
-                uniqCounter = 0;
-                uniq = null;
-                break;
-            }
-        }
-        if (uniqCounter === 1) {
-            break;
-        }
-    }
-    return uniq;
+function solution(str) {
+    const arrayStr = new Array();
+    if (str.length % 2 === 0) {
+        for (let x = 0; x < str.length; x++) {
+            arrayStr.push(str[x] + str[x + 1]);
+            x++;
+        };
+    } else {
+        for (let x = 0; x < str.length; x++) {
+            if (x < str.length - 1) {
+                arrayStr.push(str[x] + str[x + 1]);
+            } else {
+                arrayStr.push(str[x] + '_');
+            };
+            x++;
+        };
+    };
+    return arrayStr;
 };
 
-console.log(findUniq([0, 0, 0.55, 0, 0]));
-  
+function solution2(str) {
+    const arrayStr = [];
+    for (let i = 0; i < str.length; i += 2) {
+        let second = str[i + 1] || '_';
+        arrayStr.push(str[i] + second);
+    }
+    return arrayStr;
+}
+
+console.log(solution2('abc'));
