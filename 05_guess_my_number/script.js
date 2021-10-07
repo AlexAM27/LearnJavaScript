@@ -1,36 +1,25 @@
 'use strict';
 
-let maxScore = 20;
-let actualScore = document.querySelector('.score-label').textContent;
-let guess = false;
-let randomNumber = Math.floor(Math.random() * 20) + 1;
+let guessNumber = Math.floor(Math.random() * 20 + 1);
+console.log(guessNumber);
+let userNumber;
 
-function getMaxScore(actual, max) {
-    if(actual < max) {
-        max = actual;
-        return max;
-    }
-    if(max < actual || max === actual) {
-        return max;
-    }
+function equalNumbers(someNumber) {
+    document.querySelector('.check').addEventListener('click', function() {
+        userNumber = Number(document.querySelector('input').value);
+        if(userNumber < someNumber) {
+            document.querySelector('.message').textContent = 'Too low!';
+        }
+        if(userNumber > someNumber) {
+            document.querySelector('.message').textContent = 'Too high!';
+        }
+        if(userNumber === someNumber) {
+            document.querySelector('.message').textContent = 'Correct number!';
+            document.querySelector('.show-number').textContent = userNumber;
+            document.querySelector('body').style.backgroundColor = 'green';
+        }
+    });
 };
 
-function guessNumber() {
-    let guessNumber = document.querySelector('input');
-    while(!guess) {
-        if()
-    }
+equalNumbers(guessNumber);
 
-}
-
-function again() {
-    document.querySelector('.score-label').textContent = '20';
-    document.querySelector('.highscore-label').textContent = getMaxScore();
-    randomNumber = Math.floor(Math.random() * 20) + 1;
-};
-
-document.querySelector('.check').addEventListener('click', guessNumber();)
-
-console.log(document.querySelector('.message').textContent);
-
-document.querySelector('.message').textContent = 'changed...'
