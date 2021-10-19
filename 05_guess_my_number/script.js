@@ -20,7 +20,7 @@ document.querySelector('.check').addEventListener('click', function() {
     if(userNumber === guessNumber) {
         document.querySelector('.message').textContent = 'Correct number!';
         document.querySelector('.show-number').textContent = userNumber;
-        document.querySelector('body').style.backgroundColor = '#7AEC0D';
+        document.querySelector('body').style.backgroundColor = '#0DECAC';
         score--;
         document.querySelector('.score').textContent = `${score}`;
         bestScore = score > bestScore ? score : bestScore;

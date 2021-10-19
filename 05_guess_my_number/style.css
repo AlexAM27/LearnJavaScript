@@ -28,7 +28,7 @@ body {
     margin-top: 19px;
     float: right;
     width: 45%;
-    text-align: right;
+    text-align: right; 
 }
 
 h1 {
@@ -40,17 +40,45 @@ h1 {
 
 .show-number {
     text-align: center;
-    height: 70px;
-    width: 70px;
-    padding-left: 49%;
-    font-size: 60px;
+    height: 150px;
+    width: 150px;
+    font-size: 120px;
+    margin: 0 auto;
     background-color: white;
+    color: black;
+}
+
+main {
+    margin-top: 100px;
 }
 
 .left {
     float: left;
+    margin-left: 20%;
+}
+
+.left input {
+    width: 245px;
+    height: 80px;
+    font-size: 40px;
+}
+
+.left button {
+    width: 185px;
+    height: 80px;
+    margin-left: 30px;
+    margin-top: 15px;
+    border-radius: 5%;
+    font-size: 35px;
+    font-family: 'Lobster', cursive;
 }
 
 .right {
     float: right;
+    font-size: 35px;
+    margin-right: 20%;
+}
+
+.message {
+    margin-top: 0;
 }
