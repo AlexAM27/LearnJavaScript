@@ -7,26 +7,38 @@ let bestScore = 0;
 
 document.querySelector('.check').addEventListener('click', function() {
     userNumber = Number(document.querySelector('input').value);
-    if(userNumber < guessNumber) {
-        document.querySelector('.message').textContent = 'Too low!';
-        score--;
-        document.querySelector('.score').textContent = `${score}`;
-    }
-    if(userNumber > guessNumber) {
-        document.querySelector('.message').textContent = 'Too high!';
-        score--;
-        document.querySelector('.score').textContent = `${score}`;
-    }
-    if(userNumber === guessNumber) {
-        document.querySelector('.message').textContent = 'Correct number!';
-        document.querySelector('.show-number').textContent = userNumber;
-        document.querySelector('body').style.backgroundColor = '#0DECAC';
-        score--;
-        document.querySelector('.score').textContent = `${score}`;
-        bestScore = score > bestScore ? score : bestScore;
-        console.log(bestScore);
-        document.querySelector('.highscore').textContent = `${bestScore}`;
-    }
+    if (userNumber < 1 || userNumber > 20) {
+        document.querySelector('.message').textContent = '❌ Use numbers between 1 and 20';
+    } else {
+        if (score > 1) {
+            if (userNumber < guessNumber) {
+                document.querySelector('.message').textContent = 'Too low!';
+                score--;
+                document.querySelector('.score').textContent = `${score}`;
+            };
+        
+            if (userNumber > guessNumber) {
+                document.querySelector('.message').textContent = 'Too high!';
+                score--;
+                document.querySelector('.score').textContent = `${score}`;
+            };
+        
+            if (userNumber === guessNumber) {
+                document.querySelector('.message').textContent = '🎉 Correct number!';
+                document.querySelector('.show-number').textContent = userNumber;
+                document.querySelector('body').style.backgroundColor = '#029511';
+                score--;
+                document.querySelector('.score').textContent = `${score}`;
+                bestScore = score > bestScore ? score : bestScore;
+                console.log(bestScore);
+                document.querySelector('.highscore').textContent = `${bestScore}`;
+            };
+        } else {
+            document.querySelector('.message').textContent = 'You lost the game! Click again to continue';
+            score--;
+            document.querySelector('.score').textContent = `${score}`;
+        };         
+    };
 });
 
 document.querySelector('.again').addEventListener('click', function() {
