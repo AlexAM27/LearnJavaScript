@@ -1,8 +1,8 @@
-div .buttons {
+main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 59em;
+    height: 100%;
     background: rgb(30,207,56);
     background: linear-gradient(180deg, rgba(30,207,56,1) 1%, rgba(22,12,223,0.6446953781512605) 77%);
 }
