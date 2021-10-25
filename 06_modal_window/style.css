@@ -1,0 +1,24 @@
+div .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 59em;
+    background: rgb(30,207,56);
+    background: linear-gradient(180deg, rgba(30,207,56,1) 1%, rgba(22,12,223,0.6446953781512605) 77%);
+}
+
+button {
+    height: 5em;
+    width: 15em;
+    color: #000000;
+    background-color: #f8f8ff;
+    border-radius: 2em;
+    font-size: 1.5em;
+    font-weight: bold;   
+}
+
+.middle_button {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
