@@ -1,10 +1,15 @@
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+html {
+    font-size: 16px;
+}
+
+body {
     background: rgb(30,207,56);
-    background: linear-gradient(180deg, rgba(30,207,56,1) 1%, rgba(22,12,223,0.6446953781512605) 77%);
+    background: linear-gradient(142deg, rgba(30,207,56,1) 1%, rgba(12,223,132,0.6979166666666667) 77%);
+}
+
+.buttons {
+    width: 75em;
+    margin: 0 auto;
 }
 
 button {
@@ -22,3 +27,28 @@ button {
     margin-right: 2em;
 }
 
+.modal_window {
+    height: 18em;
+    width: 25em;
+    margin: 5em auto;
+    background-color: #f0ffff;
+    font-size: 1.5em;
+    font-family: 'Zen Kurenaido', sans-serif;
+    visibility: hidden;
+}
+
+.modal_window h3 {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.modal_window p {
+    padding: 0 1em;
+}
+
+.modal_window img {
+    height: 2.5em;
+    width: 2.5em;
+    margin-left: 22em;
+    margin-top: 0;
+}
