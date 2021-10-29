@@ -8,62 +8,23 @@ body {
 }
 
 .buttons {
-    width: 75em;
+    box-sizing: border-box;
+    height: 120px;
+    width: 700px;
     margin: 0 auto;
 }
 
 button {
-    height: 5em;
-    width: 15em;
-    color: #000000;
-    background-color: #f8f8ff;
-    border-radius: 2em;
-    font-size: 1.5em;
-    font-weight: bold;   
-}
-
-.middle_button {
-    margin-left: 2em;
-    margin-right: 2em;
+    height: 50px;
+    width: 140px;
+    margin: 35px 40px;
+    border-radius: 5px;
 }
 
 .modal_window {
-    height: 18em;
-    width: 25em;
-    margin: 5em auto;
-    background-color: #f0ffff;
-    font-size: 1.5em;
-    font-family: 'Zen Kurenaido', sans-serif;
+    box-sizing: border-box;
+    width: 350px;
+    margin: 0 auto;
+    background-color: #faebdf;
 }
-
-.modal_window h3 {
-    text-align: center;
-    padding-top: 1em;
-}
-
-.modal_window p {
-    padding: 0 1em;
-}
-
-.modal_window img {
-    height: 2.5em;
-    width: 2.5em;
-    margin-left: 22em;
-    margin-top: 0;
-}
-
-.modal_window img:hover {
-    cursor: pointer;
-}
-
-.hidden {
-    display: none;
-}
-
-.overlay {
-    height: 100%;
-    width: 100%;
-    background-color: #000000;
-}
-
 
