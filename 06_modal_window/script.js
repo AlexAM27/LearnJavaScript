@@ -38,8 +38,8 @@ overlay.addEventListener('click', function() {
     };
 });
 
-document.onkeydown = function(evt) {
+document.addEventListener('keydown', function(evt) {
     if(evt.key === 'Escape') {
         modalWindowAndOverlay.forEach(elem => elem.style.visibility = 'hidden');
     }
-}
+});
