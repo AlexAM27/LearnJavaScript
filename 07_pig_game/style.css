@@ -1,0 +1,39 @@
+html {
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(14,14,209,1) 10%, rgba(0,212,255,1) 100%);
+    min-height: 100%;
+}
+
+.field {
+    width: 70%;
+    height: 750px;
+    margin: 10% auto;
+    border: 1px solid #000000;
+    border-radius: 7px;
+}
+
+.player_container {
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+
+.player_1 {
+    float: left;
+    border-right: 1px solid #000000;
+}
+
+.player_2 {
+    float: right;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+button {
+    position: absolute;
+}
+
