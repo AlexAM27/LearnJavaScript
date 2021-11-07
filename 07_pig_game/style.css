@@ -31,9 +31,29 @@ html {
 h2 {
     font-weight: bold;
     font-size: 40px;
+    margin: 80px auto;
+}
+
+span {
+    font-size: 40px;
 }
 
 button {
     position: absolute;
+    transform: translateX(-50%);
+}
+
+#new {
+    width: 150px;
+    left: 50%;
+}
+
+.current_score {
+    margin: 300px auto 0 auto;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    height: 150px;
+    width: 200px;
+    background-color: #0E70D9;
 }
 
