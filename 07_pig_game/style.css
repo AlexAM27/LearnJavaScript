@@ -1,59 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(14,14,209,1) 10%, rgba(0,212,255,1) 100%);
-    min-height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  background: #42caff;
+
+  background: linear-gradient(180deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%);
+
+  background: -moz-linear-gradient(180deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%);
+
+  background: -webkit-linear-gradient(180deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#40C9FF", endColorstr="#E81CFF", GradientType=1 );
+
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-field {
+  position: relative;
+  height: 50rem;
+  width: 60rem;
+  border-radius: 5px;
+  box-shadow: 0 1rem 4rem 1.2rem rgba(0, 0, 0, 0.65);
+  display: flex;
 }
 
 .field {
-    width: 70%;
-    height: 750px;
-    margin: 10% auto;
-    border: 1px solid #000000;
-    border-radius: 7px;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.player_container {
-    box-sizing: border-box;
-    width: 50%;
-    height: 100%;
-    text-align: center;
+.name-score-field {
+  margin-top: 6.4rem;
 }
 
-.player_1 {
-    float: left;
-    border-right: 1px solid #000000;
+.player-name {
+  font-size: 2.8rem;
+  text-transform: uppercase;
 }
 
-.player_2 {
-    float: right;
+.score {
+  margin-top: 3.6rem;
+  font-size: 2.8rem;
+  text-align: center;
 }
 
-h2 {
-    font-weight: bold;
-    font-size: 40px;
-    margin: 80px auto;
+.current {
+  margin-bottom: 6.4rem;
+  color: white;
+  background-color: #42caff;
+  height: 6.4rem;
+  width: 8.6rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  text-align: center;
 }
 
-span {
-    font-size: 40px;
+.current-name,
+.current-score{
+  margin-top: 1rem;
 }
 
-button {
-    position: absolute;
-    transform: translateX(-50%);
+.player-left {
+  border-right: 1px solid #ffffff;
 }
 
-#new {
-    width: 150px;
-    left: 50%;
+.player-right {
+
 }
 
-.current_score {
-    margin: 300px auto 0 auto;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    height: 150px;
-    width: 200px;
-    background-color: #0E70D9;
+.btn {
+  font-size: 1.2rem;
+  background-color: #ffffff;
+  opacity: 0.72;
+  text-transform: uppercase;
+  position: absolute;
+  height: 2.4rem;
+  width: 9.6rem;
+  border: none;
+  border-radius: 5rem;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
+
+.new-game {
+  top: 6.4rem;
+}
+
+.roll-dice {
+  bottom: 10.4rem; 
+}
+
+.hold {
+  bottom: 6.4rem;
+}
+
+
+
+
+
+
+
 

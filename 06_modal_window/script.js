@@ -1,45 +1,36 @@
-'use strict';
+'use strict'
 
-const windowButton1 = document.querySelector('#left_button');
+const buttonShowModal = document.querySelectorAll('.btn');
+const modalWindow = document.querySelector('.window-container');
+const closeButton = document.querySelector('.close-btn');
+const overlayLayout = document.querySelector('.overlay');
 
-const windowButton2 = document.querySelector('#middle_button');
+const showModalWindow = function()  {
+  modalWindow.classList.remove('hidden');
+  overlayLayout.classList.remove('hidden');
+};
 
-const windowButton3 = document.querySelector('#right_button');
+const hideModalWindow = function () {
+  modalWindow.classList.add('hidden');
+  overlayLayout.classList.add('hidden');
+};
 
-const modalWindowAndOverlay = document.querySelectorAll('.hidden');
+for(let i = 0; i < buttonShowModal.length; i++) {
+  buttonShowModal[i].addEventListener('click', showModalWindow);
+};
 
-const closeModalWindowButton = document.querySelector('img');
+closeButton.addEventListener('click', hideModalWindow);
 
-const overlay = document.querySelector('.overlay');
+overlayLayout.addEventListener('click', hideModalWindow);
 
-windowButton1.addEventListener('click', function() {
-    modalWindowAndOverlay.forEach(elem => elem.style.visibility = 'visible');
-});
+document.addEventListener('keydown', function(e) {
+  if(e.key === 'Escape' && !modalWindow.classList.contains('hidden')) {
+    hideModalWindow();
+  }
+})
 
-windowButton2.addEventListener('click', function() {
-    modalWindowAndOverlay.forEach(elem => elem.style.visibility = 'visible');
-});
 
-windowButton3.addEventListener('click', function() {
-    modalWindowAndOverlay.forEach(elem => elem.style.visibility = 'visible');
-});
 
-closeModalWindowButton.addEventListener('click', function() {
-    modalWindowAndOverlay.forEach(elem => elem.style.visibility = 'hidden');
-});
 
-overlay.addEventListener('click', function() {
-    // modalWindowAndOverlay.forEach(elem => elem.style.visibility = 'hidden');
 
-    // or
 
-    for(let elem = 0; elem < modalWindowAndOverlay.length; elem++) {
-        modalWindowAndOverlay[elem].style.visibility = 'hidden';
-    };
-});
-
-document.addEventListener('keydown', function(evt) {
-    if(evt.key === 'Escape') {
-        modalWindowAndOverlay.forEach(elem => elem.style.visibility = 'hidden');
-    }
-});

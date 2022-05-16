@@ -1,70 +1,56 @@
 'use strict';
 
-function createRandomNumber() {
-    return Math.floor(Math.random() * 20 + 1); 
-};
+const defaultScore = 20;
+let randomNumber = Math.floor((Math.random() * 20)) + 1;
+let highScore = 0;
+let tryCounter = 20;
 
-function setMessage(message) {
-    document.querySelector('.message').textContent = message;
-};
-
-function setScore(message) {
-    document.querySelector('.score').textContent = message;
-};
-
-function setBackgroundColor(color) {
-    document.querySelector('body').style.backgroundColor = color;
-};
-
-function showNumber(message) {
-    document.querySelector('.show-number').textContent = message;
-};
-
-let guessNumber = createRandomNumber();
-let userNumber;
-let score = 20;
-let bestScore = 0;
+function displayInfoMessage(message) {
+  document.querySelector('.info').textContent = message;
+}
 
 document.querySelector('.check').addEventListener('click', function() {
-    userNumber = Number(document.querySelector('input').value);
-    if (userNumber < 1 || userNumber > 20) {
-        setMessage('❌ Use numbers between 1 and 20');
-    } else {
-        if (score > 1) {
-            if (userNumber !== guessNumber) {
-                setMessage(userNumber < guessNumber ? 'Too low' : 'Too high');
-                score--;
-                setScore(score);
-            } else {
-                setMessage('🎉 Correct number!');
-                showNumber(userNumber);
-                setBackgroundColor('#029511');
-                score--;
-                setScore(score);
-                bestScore = score > bestScore ? score : bestScore;
-                console.log(bestScore);
-                document.querySelector('.highscore').textContent = `${bestScore}`;
-                document.querySelector('input').readOnly = true;
-                document.querySelector('.check').disabled = true;
-            };
-        } else {
-            setMessage('You lost the game! Click "again" to continue');
-            score--;
-            setScore(score);
-        };         
-    };
+  const guess = Number(document.querySelector('.guess-number').value);
+  if(!guess) {
+    displayInfoMessage('No number!!! Please give a number!!!');
+  } else if (tryCounter <= 0 && guess !== randomNumber) {
+    displayInfoMessage('You lose! Click again button to try one more time');
+  } else if(guess <= 0 || guess > 20) {
+    displayInfoMessage('You number should be between 1 and 20');
+  } else {
+    if(guess > randomNumber) {
+      displayInfoMessage('Too high');
+    tryCounter--;
+    document.querySelector('.score-number').textContent = tryCounter;
+  }
+  if(guess < randomNumber) {
+    displayInfoMessage('Too low');
+    tryCounter--;
+    document.querySelector('.score-number').textContent = tryCounter;
+  }
+  if(guess === randomNumber) {
+    tryCounter--;
+    document.querySelector('.score-number').textContent = tryCounter;
+    displayInfoMessage('You are right!!!');
+    document.querySelector('.answer-field').textContent = `${guess}`;
+    document.querySelector('body').style.backgroundColor = 'green';
+    if(tryCounter > highScore) {
+      highScore = tryCounter;
+    }
+    document.querySelector('.highscore-number').textContent = highScore;
+  }
+  }
 });
 
-document.querySelector('.again').addEventListener('click', function() {
-    score = 20;
-    setScore(score);
-    showNumber('?');
-    setMessage('Start guessing...');
-    setBackgroundColor('black');
-    document.querySelector('input').value = '';
-    document.querySelector('input').readOnly = false;
-    document.querySelector('.check').disabled = false;
-    guessNumber = createRandomNumber();
+document.querySelector('.restart').addEventListener('click', function() {
+  document.querySelector('.score-number').textContent = defaultScore;
+  displayInfoMessage('Start guessing...');
+  document.querySelector('.answer-field').textContent = '?';
+  document.querySelector('body').style.backgroundColor = 'black';
+  document.querySelector('.guess-number').value = '';
+  randomNumber = Math.floor((Math.random() * 20)) + 1;
+  tryCounter = 20;
+  console.log(randomNumber);
 });
 
-
+console.log(randomNumber);

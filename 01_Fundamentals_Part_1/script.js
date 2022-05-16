@@ -202,8 +202,232 @@ console.log(typeof language);
 
 // console.log(`Portugal's population is ${population > 33 ? `above` : `below`} average`);
 
-const bill = 430;
-const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// const bill = 430;
+// const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 
-console.log(`“The bill was ${bill}, the tip was ${tip}, and the total value 
-${bill + tip}`)
+// console.log(`“The bill was ${bill}, the tip was ${tip}, and the total value 
+// ${bill + tip}`)
+
+// function domainName(url) {
+//  const dotsAmount = url.match(/\./g).length ?? null;
+//  console.log(dotsAmount);
+//  let domain;
+//  if(!dotsAmount) {
+//    if(url.search('//') !== -1) {
+//      domain = url.substring(url.lastIndexOf('/') + 1, url.length);
+//    } else {
+//      domain = url;
+//    }
+//  }
+//  if(dotsAmount === 1) {
+//   if(url.search('www.') !== -1) {
+//     domain = url.substring(url.indexOf('.') + 1, url.length);
+//   } 
+//   if(url.search('//') !== -1) {
+//     url = url.slice(0, url.indexOf('.'));
+//     console.log(url);
+//     domain = url.substring(url.lastIndexOf('/') + 1, url.length);
+//   }
+//  }
+//  return domain;
+// }
+
+// console.log(domainName('http://google'));
+
+// function invert(array) {
+  
+//    return array.map(el => el * -1);
+// }
+// console.log(invert([1,2,3,4,5]));
+
+// let isnum = /^\d+$/.test('-123');
+// console.log(isnum);
+
+// function century(year) {
+//   if(year === 0) {
+//     return 0;
+//   }
+//   if(year > 0 && year <= 100 ) {
+//     return 1;
+//   }
+//   if(year > 100) {
+//     return Number.isInteger(year / 100) ? (year / 100) - 1 : Math.floor(year / 100) + 1;
+//   }
+// }
+
+// console.log(century(1900));
+
+// function tribonacci(signature,n){
+//   let count = signature.length;
+//   let newArr = [];
+//   if(n < signature.length) {
+//     for(let i = 0; i < n; i++) {
+//       newArr.push(signature[i]);
+//     }
+//   } else {
+//     newArr = signature;
+//      while(count < n) {
+//     newArr.push(getNextNum(signature));
+//     count++;
+//   }
+//   }
+//   return newArr;
+// }
+
+// function getNextNum(arr) {
+//   let num = 0;
+//   for(let i = arr.length - 1; i > arr.length - 4; i-- ) {
+//     num += arr[i];
+//   }
+//   return num;
+// }
+
+// console.log(tribonacci([1,1,1],1));
+
+// function getMiddle(s) {
+//   let newS = '';
+//   if(Number.isInteger(s.length / 2)) {
+//     newS += s[s.length / 2 - 1] + s[s.length / 2];
+//   } else {
+//     newS += s[Math.floor(s.length / 2)];
+//   }
+//   return newS;
+// }
+
+// console.log(getMiddle('testing'));
+
+// function removeChar(str){
+//   let newStr = '';
+//  for(let i = 1; i < str.length - 1; i++) {
+//   newStr += str[i];
+//  }
+//  return newStr;
+//  };
+
+
+// console.log(removeChar('asi'));
+ 
+// function solution(str, ending){
+//   let strEndig = str.substring(str.length - ending.length);
+//   return strEndig === ending;
+// }
+
+// function solution2(str, ending){
+//   return str.endsWith(ending);
+// }
+
+// console.log(solution2('anvd', 'vd'));
+
+// function filter_list(l) {
+//   const newArr = [];
+//   for( let i = 0; i < l.length; i++) {
+//     console.log(typeof l[i]);
+//     if(typeof l[i] === "number") {
+//       newArr.push(l[i]);
+//     }
+//   }
+// }
+
+// console.log(filter_list([1,2,"a","b"]));
+
+// function accum(s) {
+//   let str = '';
+// 	for(let i = 0; i < s.length; i++) {
+//     if(i !== s.length - 1) {
+//       str += createW(s[i], i) + '-';
+//     } else {
+//       str += createW(s[i], i);
+//     }
+//   }
+//   return str;
+// }
+
+// function createW(char, i) {
+//   let str = '';
+//   for(let n = 0; n < i + 1; n++) {
+//     if(n === 0) {
+//       str += char.toUpperCase();
+//     } else {
+//       str += char.toLowerCase();
+//     }
+//   }
+//   return str;
+// }
+
+// console.log(accum('abcd'));
+
+// function abbrevName(name) {
+//   return name.split(' ').map(el => el[0].toUpperCase()).join('.');
+// }
+
+// console.log(abbrevName('patrick feeney'));
+// const alphabet = [
+//     'a', 'b', 'c', 'd', 'e', 'f',
+//     'g', 'h', 'i', 'j', 'k', 'l',
+//     'm', 'n', 'o', 'p', 'q', 'r',
+//     's', 't', 'u', 'v', 'w', 'x',
+//     'y', 'z'
+//   ];
+
+// function high(x){
+//   let maxScore = 0;
+//   let wordWithMaxScore;
+//   wordsArray = x.split(' ');
+
+//   for( let i = 0; i < wordsArray.length; i++) {
+//     let score = 0;
+//     const word = wordsArray[i];
+
+//     for(let n = 0; n < word.length; n++) {
+//       score += (alphabet.indexOf(word[n]) + 1);
+//     }
+
+//     if(score > maxScore) {
+//       maxScore = score;
+//       wordWithMaxScore = word;
+//     }
+//   }
+//   return wordWithMaxScore;
+// }
+
+
+// console.log(high('man i need a taxi up to ubud'));
+
+// function digitize(n) {
+//   return n.toString().split('').map(el => Number(el)).reverse();
+// }
+
+// console.log(digitize(945));
+
+// function find_average(array) {
+//   let sum = 0;
+//   if(array.length !== 0) {
+//     array.forEach(element => {
+//       sum += element;
+//     });
+//     return sum / array.length;
+//   }
+//   return 0;
+// }
+
+// console.log(find_average([]));
+
+//return the total number of smiling faces in the array
+
+function countSmileys(arr) {
+  let counter = 0;
+  arr.forEach(el => {
+    if(((el.includes(':') || el.includes(';')) && (el.includes(')') || el.includes('D')))) {
+      if(el.length !== 3) {
+        counter++;
+      } else {
+        if((el.includes('-') || el.includes('~'))) {
+          counter++;
+        }
+      }
+    }  
+  });
+  return counter;
+}
+
+console.log(countSmileys([':)',':(',':D',':O',':;']));

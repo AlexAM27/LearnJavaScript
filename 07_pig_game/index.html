@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Pig Game</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Pig game</title>
 </head>
 <body>
-    <div class="field">
-        <button id="new">NEW GAME</button>
-        <button id="roll">ROLL DICE</button>
-        <button id="hold">HOLD</button>
-        <div class="player_1 player_container">
-            <h2>PLAYER 1</h2>
-            <span class="player_score total_player_1">0</span>
-            <div class="current_score">
-                <h3>CURRENT</h3>
-                <span class="current_player_1">0</span>
-            </div>
+  <div class="container">
+    <div class="play-field">
+      <div class="player-left field">
+        <div class="name-score-field">
+          <span class="player-name">Player 1</span>
+          <p class="player-left-score score">0</p>
         </div>
-        <div class="player_2 player_container">
-            <h2>PLAYER 2</h2>
-            <span class="player_score total_player_2">0</span>
-            <div class="current_score">
-                <h3>CURRENT</h3>
-                <span class="current_player_2">0</span>
-            </div>
+        <div class="player-left-current current">
+          <p class="current-name">Current</p>
+          <p class="left current-score">0</p>
         </div>
+      </div>
+      <div class="player-right field">
+        <div class="name-score-field">
+          <span class="player-name">Player 2</span>
+          <p class="player-right-score score">0</p>
+        </div>
+        <div class="player-right-current current">
+          <p class="current-name">Current</p>
+          <p class="right current-score">0</p>
+        </div>
+      </div>
+      <button class="btn new-game">New game</button>
+      <button class="btn roll-dice">Roll dice</button>
+      <button class="btn hold">Hold</button>
     </div>
-    <script src="script.js"></script>
+  </div>
+  <script src="./script.js"></script>
 </body>
 </html>

@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Modal window</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Modal Window</title>
 </head>
 <body>
-    <div class="buttons">
-        <button id="left_button"><span>Show modal 1</span></button>
-        <button id="middle_button">Show modal 2</button>
-        <button id="right_button">Show modal 3</button>
+  <div class="container">
+    <div class="btn-container">
+      <button class="btn first">Button 1</button>
+      <button class="btn second">Button 2</button>
+      <button class="btn third">Button 3</button>
     </div>
-    <div class="modal_window hidden">
-        <h3>This is modal window</h3>
-        <p>Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, nulla assumenda amet temporibus numquam laudantium enim voluptates inventore dicta alias sequi unde, magnam itaque dolores a. Rem natus in culpa consequuntur facere quam. Nostrum ea at repellat libero temporibus cupiditate esse, ad dicta accusantium, non quod vero omnis sint ratione.
-            sit amet consectetur adipisicing elit. Animi quod est rem, dolorem consequuntur veritatis provident qui dignissimos iure suscipit placeat velit eum dolores debitis aliquid tempora nisi officia dolor tempore illum, doloremque repellat eos. Similique harum, deleniti rem, voluptatibus blanditiis commodi quis aspernatur cum, tenetur officiis consectetur. Veniam, quia?</p>        
-        <img src="./img/close-button-png-30231.png" alt="close"> 
+    <div class="window-container hidden">
+        <h1>This is modal window</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti minima repellat, incidunt odit, soluta, praesentium omnis nobis dolorem distinctio maiores magni tempora. Corporis, officia quod. Eum optio id dolorum fugiat architecto. Adipisci quibusdam corrupti alias suscipit dolores, exercitationem cum odio tempore tempora, rerum, molestiae saepe expedita totam animi aperiam libero.</p>
+        <img class="close-btn" src="./img/close-button-png-30231.png" alt="close button">
     </div>
     <div class="overlay hidden"></div>
-    <script src="./script.js"></script>
+  </div>
+  <script src="./script.js"></script>
 </body>
 </html>

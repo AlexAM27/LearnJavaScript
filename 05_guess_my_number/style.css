@@ -1,86 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
     box-sizing: border-box;
     background-color: black;
     color: white;
     font-family: 'Lobster', cursive;
-    padding: 0 30px;
 }
 
-.top {
-    margin-top: 30px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.top-left {
-    margin-top: 19px;
-    float: left;
-    width: 45%;
+.header-container {
+  margin-top: 9.4rem;
+  width: 50rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8rem;
 }
 
-.again {
-    width: 175px;
-    height: 75px;
-    border-radius: 5%;
-    font-size: 40px;
-    font-family: 'Lobster', cursive;
+.btn {
+  height: 3.2rem;
+  width: 8.2rem;
+  font-family: 'Lobster', cursive;
+  font-size: 1.8rem;
 }
 
-.top-right {
-    margin-top: 19px;
-    float: right;
-    width: 45%;
-    text-align: right; 
+.content-container {
+  margin-top: 9.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-h1 {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    font-size: 60px;
+.head-message {
+  font-size: 4.8rem;
+  text-align: center;
 }
 
-.show-number {
-    text-align: center;
-    height: 150px;
-    width: 150px;
-    font-size: 120px;
-    margin: 0 auto;
-    background-color: white;
-    color: black;
+.answer-field {
+  margin-top: 4.8rem;
+  background-color: white;
+  height: 8.4rem;
+  width: 8.4rem;
+  color: black;
+  font-size: 7.2rem;
+  line-height: 1.0;
+  text-align: center;
 }
 
-main {
-    margin-top: 100px;
+.footer-container {
+  margin-top: 4.8rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.left {
-    float: left;
-    margin-left: 20%;
+.guess-number {
+  display: block;
+  width: 8.2rem;
+  font-size: 2.4rem;
 }
 
-.left input {
-    width: 245px;
-    height: 80px;
-    font-size: 40px;
-    text-align: center;
-    font-family: 'Lobster', cursive;
+.check {
+  margin-top: 2.4rem;
 }
 
-.left button {
-    width: 185px;
-    height: 80px;
-    margin-left: 30px;
-    margin-top: 15px;
-    border-radius: 5%;
-    font-size: 35px;
-    font-family: 'Lobster', cursive;
+.info-fields p{
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
 }
 
-.right {
-    float: right;
-    font-size: 35px;
-    margin-right: 20%;
-}
 
-.message {
-    margin-top: 0;
-}
+
