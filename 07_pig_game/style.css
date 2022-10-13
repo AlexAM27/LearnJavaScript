@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,111 +10,110 @@ html {
 }
 
 body {
-  background: #42caff;
+  background: hsla(191, 88%, 81%, 1);
 
-  background: linear-gradient(180deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%);
+  background: linear-gradient(90deg, hsla(191, 88%, 81%, 1) 0%, hsla(260, 72%, 82%, 1) 50%, hsla(247, 73%, 69%, 1) 100%);
 
-  background: -moz-linear-gradient(180deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(191, 88%, 81%, 1) 0%, hsla(260, 72%, 82%, 1) 50%, hsla(247, 73%, 69%, 1) 100%);
 
-  background: -webkit-linear-gradient(180deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(191, 88%, 81%, 1) 0%, hsla(260, 72%, 82%, 1) 50%, hsla(247, 73%, 69%, 1) 100%);
 
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#40C9FF", endColorstr="#E81CFF", GradientType=1 );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#A4E9F9", endColorstr="#C5AEF2", GradientType=1 );
 
-  font-family: 'Roboto', sans-serif;
-  box-sizing: border-box;
+  height: 100vh;
+
 }
 
 .container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.play-field {
-  position: relative;
-  height: 50rem;
-  width: 60rem;
-  border-radius: 5px;
-  box-shadow: 0 1rem 4rem 1.2rem rgba(0, 0, 0, 0.65);
-  display: flex;
+  font-family: 'Ubuntu', sans-serif;
+  position: absolute;
+  width: 85rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1.2rem;
 }
 
 .field {
-  height: 100%;
-  width: 50%;
+  display: flex;
+}
+
+.player {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  width: 50%;
 }
 
-.name-score-field {
+.name {
   margin-top: 6.4rem;
-}
-
-.player-name {
-  font-size: 2.8rem;
+  font-size: 4.8rem;
   text-transform: uppercase;
 }
 
 .score {
   margin-top: 3.6rem;
-  font-size: 2.8rem;
-  text-align: center;
+  font-size: 5.6rem;
+  color: #0c8599;
 }
 
-.current {
+.state {
+  margin-top: 12rem;
   margin-bottom: 6.4rem;
-  color: white;
-  background-color: #42caff;
-  height: 6.4rem;
-  width: 8.6rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.8rem;
-  text-align: center;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+  background-color: #0c8599;
+  padding: 1.8rem 3.6rem;
+  border-radius: 1.2rem;
 }
 
-.current-name,
-.current-score{
-  margin-top: 1rem;
+.first {
+  background-color: beige;
+  opacity: 0.7;
+  border-radius: 1.2rem 0 0 1.2rem;
 }
 
-.player-left {
-  border-right: 1px solid #ffffff;
-}
-
-.player-right {
-
+.second {
+  background-color: beige;
+  opacity: 0.5;
+  border-radius: 0 1.2rem 1.2rem 0;
 }
 
 .btn {
-  font-size: 1.2rem;
-  background-color: #ffffff;
-  opacity: 0.72;
-  text-transform: uppercase;
   position: absolute;
-  height: 2.4rem;
-  width: 9.6rem;
-  border: none;
-  border-radius: 5rem;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  background-color: #e7f5ff;
+  padding: 5px 1rem;
+  border-radius: 1.2rem;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translateX(-50%);
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .new-game {
-  top: 6.4rem;
+  top: 7.4rem;
 }
 
-.roll-dice {
-  bottom: 10.4rem; 
+.roll {
+  bottom: 13.2rem;
 }
 
 .hold {
   bottom: 6.4rem;
 }
 
+ion-icon {
+  font-size: 2.6rem;
+}
 
 
 
