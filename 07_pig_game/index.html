@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Pig Game</title>
     
+  </head>  
   <body>
     <div class="container">
       <div class="field">
@@ -39,18 +40,24 @@
           <div>Hold</div>
         </div>
         <div class="points hidden">
-          <div class="point top-left"></div>
-          <div class="point top-right"></div>
-          <div class="point center-left"></div>
-          <div class="point center-middle"></div>
-          <div class="point center-right"></div>
-          <div class="point top-right"></div>
-          <div class="point bottom-right"></div>
+          <div class="top flex">
+            <div class="point top-left"></div>
+            <div class="point top-right"></div>
+          </div>
+          <div class="middle flex">
+            <div class="point center-left"></div>
+            <div class="point center-middle"></div>
+            <div class="point center-right"></div>
+          </div>
+          <div class="bottom flex">
+            <div class="point bottom-left"></div>
+            <div class="point bottom-right"></div>
+          </div>
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  </head>
   </body>
 </html>
