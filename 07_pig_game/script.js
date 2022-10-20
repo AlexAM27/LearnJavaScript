@@ -117,28 +117,38 @@ const changePlayerCurrentScore = function(num) {
   }
 }
 
-const checkWinner = function() {
-
+const checkWinner = function(score) {
+  return score >= 100;
 }
 
 const changePlayer = function() {
   console.log('Player One:', playerOneMove);
   if(playerOneMove) {
-    playerOneField.style.opacity = 0.5;
-    playerTwoField.style.opacity = 0.7;
     changePlayerCurrentScore(0);
     playerOneMove = false;
     playerOneScore += currentScore;
     playerOneScoreField.textContent = playerOneScore;
     currentScore = 0;
+    win = checkWinner(playerOneScore);
+    if(win) {
+      playerOneField.style.backgroundColor = '#d8f5a2';
+    } else {
+      playerOneField.style.opacity = 0.5;
+      playerTwoField.style.opacity = 0.7;
+    }
   } else {
-    playerOneField.style.opacity = 0.7;
-    playerTwoField.style.opacity = 0.5;
     changePlayerCurrentScore(0);
     playerOneMove = true;
     playerTwoScore += currentScore;
     playerTwoScoreField.textContent = playerTwoScore;
     currentScore = 0;
+    win = checkWinner(playerTwoScore);
+    if(win) {
+      playerTwoField.style.backgroundColor = '#d8f5a2';
+    } else {
+      playerOneField.style.opacity = 0.7;
+      playerTwoField.style.opacity = 0.5;
+    }
   }
   
 }
@@ -177,13 +187,15 @@ const rollDice = function(num) {
 }
 
 rollDiceButton.addEventListener('click', function() {
-  if(!isGameOn) {
-    pointsField.classList.remove('hidden');
+  if(!win) {
+    if(!isGameOn) {
+      pointsField.classList.remove('hidden');
+    }
+    isGameOn = true;
+    const num = getDiceNumber();
+    console.log(num);
+    rollDice(num);
   }
-  isGameOn = true;
-  const num = getDiceNumber();
-  console.log(num);
-  rollDice(num);
 });
 
 newGameButton.addEventListener('click', function() {
@@ -196,6 +208,8 @@ newGameButton.addEventListener('click', function() {
   changePlayerTwoCurrentScore(0);
   playerOneScoreField.textContent = 0;
   playerTwoScoreField.textContent = 0;
+  playerOneField.style.backgroundColor = 'beige';
+  playerOneField.style.backgroundColor = 'beige';
 });
 
 holdButton.addEventListener('click', function() {
